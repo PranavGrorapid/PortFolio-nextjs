@@ -8,6 +8,9 @@ import { HiOutlineChevronDoubleUp } from 'react-icons/hi';
 import ContactImg from '../../../public/assets/contact.jpg';
 
 const Contact = () => {
+
+    const rows = 10;  // Use a number instead of a string
+    
   return (
     <div id='contact' className='w-full lg:h-screen'>
       <div className='max-w-[1240px] m-auto px-2 py-16 w-full '>
@@ -117,11 +120,14 @@ const Contact = () => {
                 </div>
                 <div className='flex flex-col py-2'>
                   <label className='uppercase text-sm py-2'>Message</label>
-                  <textarea
-                    className='border-2 rounded-lg p-3 border-gray-300'
-                    rows='10'
-                    name='message'
-                  ></textarea>
+                
+
+<textarea
+  className='border-2 rounded-lg p-3 border-gray-300'
+  rows={rows}
+  name='message'
+></textarea>
+
                 </div>
                 <button className='w-full p-4 text-gray-100 mt-4'>
                   Send Message
